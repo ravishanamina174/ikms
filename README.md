@@ -1,37 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## IKMS Frontend
 
-## Getting Started
+- Project: Intelligent Knowledge Management System (Frontend)
+- Purpose: UI for uploading PDFs, chatting with documents, and managing knowledge.
 
-First, run the development server:
+### **Quick Links**
+- **Frontend (Live):** `https://ikms-lake.vercel.app`
+- **Backend Repo:** `https://github.com/ravishanamina174/ikms-backend`
+- **Backend (API):** `https://ikms-backend-6655.onrender.com`
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### **User Guide**
+- **Open the app:** Visit `https://ikms-lake.vercel.app` or run locally with `npm run dev`.
+- **Upload PDFs:** Use the `Upload` widget to add documents. Supported formats: PDF.
+- **Start a chat:** Open the chat UI and ask questions — the app queries the backend knowledge service and returns answers.
+- **Toggle features:** Use the planning toggle to enable/disable experimental UI features.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Architecture Overview
+- **Stack:** Next.js (App Router), TypeScript, React, Vercel for deployment.
+- **Structure:** `app/` contains pages and layout; `components/` contains UI pieces; `lib/api.ts` handles backend requests; `public/` holds static assets.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Setup (Local)
+- **Prerequisites:** Node 18+ and npm installed.
+```bash```
+- Install deps:    npm install
+- Run dev server:  npm run dev
+- Build:           npm run build
+- Start (production):npm run start
 
-## Learn More
+### Deployment
+- Deployed to Vercel (frontend). Backend hosted on Render. Ensure `NEXT_PUBLIC_API_URL` (if used) points to the backend API.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# ikms-frontend
+### Code Documentation (Key files)
+- **`app/`**: App Router pages and server components.
+- **`app/layout.tsx`**: Global layout and providers.
+- **`app/page.tsx`**: Main entry page for the application.
+- **`components/WelcomeModal.tsx`**: Onboarding modal shown to new users.
+- **`components/Chat/ChatUI.tsx`**: Chat interface connecting to the backend conversational API.
+- **`components/Toggle/PlanningToggle.tsx`**: Small feature toggle used by the UI.
+- **`components/Upload/PdfUpload.tsx`**: PDF upload UI and client-side validations.
+- **`lib/api.ts`**: API helper functions and base URL usage.
+- **`public/`**: Static images and icons.
