@@ -6,7 +6,7 @@
 ### **Quick Links**
 - **Frontend (Live):** `https://ikms-lake.vercel.app`
 - **Backend Repo:** `https://github.com/ravishanamina174/ikms-backend`
-- **Backend (API):** `https://ikms-backend-6655.onrender.com`
+
 
 ### **User Guide**
 - **Open the app:** Visit `https://ikms-lake.vercel.app` or run locally with `npm run dev`.
